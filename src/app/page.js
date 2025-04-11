@@ -64,7 +64,7 @@ export default function Home() {
           <p className="text-white/80 text-lg">
             Challenge your brain with fast-paced JS questions!
           </p>
-          <ul className="list-disc pl-5 mt-2 text-white/70 text-sm space-y-1 list-none">
+          <ul className="pl-0 mt-2 text-white/70 text-sm space-y-1 list-none">
             <li>⏱️ Beat the clock</li>
             <li>🔥 Climb the leaderboard</li>
             <li>🎯 Beginner to Advanced levels</li>

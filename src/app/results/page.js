@@ -3,7 +3,6 @@ import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Loader from "@/components/ui/loader";
-import { toast } from "sonner";
 
 export default function ResultsWrapper() {
   return (
