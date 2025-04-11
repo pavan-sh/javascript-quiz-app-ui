@@ -48,7 +48,7 @@ export default function Home() {
       </div>
 
       {/* Right Side: Content OR Form */}
-      <div className="md:w-1/2 flex flex-col items-start text-left space-y-6 text-white transition-all duration-700 relative">
+      <div className="md:w-1/2 flex flex-col items-start text-center md:text-left space-y-6 text-white transition-all duration-700 relative">
         {/* Text Content Block */}
         <div
           className={`transition-all duration-700 ease-in-out space-y-4 ${
@@ -89,13 +89,16 @@ export default function Home() {
             JavaScript Quiz Challenge
           </h2>
           <Input
-            className="placeholder:text-white text-white placeholder:text-base text-base"
+            className="placeholder:text-white text-white placeholder:text-base !text-base"
             placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <Select value={difficulty} onValueChange={setDifficulty}>
-            <SelectTrigger className="w-full text-base text-white">
+            <SelectTrigger
+              className="w-full text-base text-white"
+              aria-label="Select difficulty"
+            >
               <SelectValue placeholder="Select difficulty" />
             </SelectTrigger>
             <SelectContent className="text-base bg-white text-black">

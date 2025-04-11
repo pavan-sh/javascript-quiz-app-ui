@@ -28,7 +28,7 @@ function Results() {
   }, [score]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1e3c72] via-[#2a5298] to-[#2b5876] p-6 flex flex-col items-center justify-center text-white">
+    <div className="min-h-[calc(100vh-100px)] bg-gradient-to-br from-[#1e3c72] via-[#2a5298] to-[#2b5876] p-6 flex flex-col items-center justify-center text-white">
       <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 w-full max-w-md text-center shadow-lg">
         <h2 className="text-2xl font-bold mb-4">🎉 Well done, {name}!</h2>
         <p className="text-xl mb-2">Your final score is:</p>

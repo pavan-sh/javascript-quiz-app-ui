@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; // for icons
+import { Menu, X } from "lucide-react";
 import { orbitron } from "@/app/fonts";
+import Lottie from "lottie-react";
+import mascotAnimation from "../../../public/mascot.json";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +13,19 @@ export default function Header() {
   return (
     <header className="bg-white/10 backdrop-blur-md border-b border-white/10 text-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+        {/* Logo with Lottie Mascot */}
         <Link
           href="/"
-          className={`text-4xl font-bold tracking-widest ${orbitron.className}`}
+          className={`flex items-center space-x-3 text-4xl font-bold tracking-widest ${orbitron.className}`}
         >
-          Quizord
+          <span className="mr-0.5">Quizord</span>
+          <div className="w-10 h-10">
+            <Lottie
+              animationData={mascotAnimation}
+              loop={true}
+              autoplay={true}
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav */}

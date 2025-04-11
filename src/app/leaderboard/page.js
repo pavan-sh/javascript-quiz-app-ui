@@ -27,28 +27,40 @@ export default function Leaderboard() {
           </p>
         ) : (
           <ul className="space-y-4">
-            {entries.map((entry, index) => (
-              <li
-                key={index}
-                className={`p-4 rounded-xl flex items-center justify-between bg-white/20 ${
-                  index === 0 ? "border-yellow-300 border" : "border-white/10"
-                }`}
-              >
-                <span className="font-medium">
-                  {index + 1}. {entry.name}
-                </span>
-                <span className="font-bold text-green-200">
-                  {entry.score} pts
-                </span>
-              </li>
-            ))}
+            {entries.map((entry, index) => {
+              const isTopScorer = index === 0;
+              return (
+                <li
+                  key={index}
+                  className={`p-4 rounded-xl flex items-center justify-between transition-all duration-300 ${
+                    isTopScorer
+                      ? "bg-yellow-100 border border-yellow-300 shadow-md shadow-yellow-200 text-yellow-800"
+                      : "bg-white/20 border border-white/10 text-white"
+                  }`}
+                >
+                  <span className="font-semibold flex items-center gap-2">
+                    {index + 1}. {entry.name}
+                    {isTopScorer && (
+                      <Crown className="w-5 h-5 text-yellow-600 animate-pulse" />
+                    )}
+                  </span>
+                  <span
+                    className={`font-bold ${
+                      isTopScorer ? "text-yellow-800" : "text-green-200"
+                    }`}
+                  >
+                    {entry.score} pts
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         )}
 
         <div className="mt-6 text-center">
           <Button
             onClick={() => router.push("/")}
-            className="w-full bg-white/20 hover:bg-white/30 text-white"
+            className="w-full bg-white/20 hover:bg-white/30 text-white cursor-pointer"
           >
             Back to Home
           </Button>
