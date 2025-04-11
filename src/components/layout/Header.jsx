@@ -4,9 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { orbitron } from "@/app/fonts";
-import Lottie from "lottie-react";
-import mascotAnimation from "../../../public/mascot.json";
-
+import dynamic from "next/dynamic";
+const LottieLogo = dynamic(() => import("@/components/common/LottieLogo"), {
+  ssr: false,
+});
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,12 +20,8 @@ export default function Header() {
           className={`flex items-center space-x-3 text-4xl font-bold tracking-widest ${orbitron.className}`}
         >
           <span className="mr-0.5">Quizord</span>
-          <div className="w-10 h-10">
-            <Lottie
-              animationData={mascotAnimation}
-              loop={true}
-              autoplay={true}
-            />
+          <div className="w-9 h-9 mb-2 relative right-2 bottom-1">
+            <LottieLogo />
           </div>
         </Link>
 
