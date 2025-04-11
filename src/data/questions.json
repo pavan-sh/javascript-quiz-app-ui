@@ -1,0 +1,482 @@
+[
+  {
+    "difficulty": "Beginner",
+    "question": "What keyword is used to declare a variable in JavaScript?",
+    "options": ["var", "let", "const", "all of the above"],
+    "answer": "all of the above"
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "What is the output of `typeof null`?",
+    "options": ["'object'", "'null'", "'undefined'", "'number'"],
+    "answer": "'object'"
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "Which operator is used for strict equality comparison?",
+    "options": ["==", "=", "===", "!="],
+    "answer": "==="
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "How do you write a single-line comment in JavaScript?",
+    "options": ["// comment", "/* comment */", "", "# comment"],
+    "answer": "// comment"
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "What is the result of `'5' + 3`?",
+    "options": ["8", "'8'", "'53'", "NaN"],
+    "answer": "'53'"
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "Which method converts a string to uppercase letters?",
+    "options": [
+      "toUpperCase()",
+      "toLowerCase()",
+      "upperCase()",
+      "convertUpper()"
+    ],
+    "answer": "toUpperCase()"
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "How do you call a function named 'myFunction'?",
+    "options": [
+      "call myFunction;",
+      "myFunction;",
+      "myFunction()",
+      "call function myFunction()"
+    ],
+    "answer": "myFunction()"
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "How do you start an IF statement in JavaScript?",
+    "options": ["if i == 5 then", "if (i == 5)", "if i = 5", "if i == 5;"],
+    "answer": "if (i == 5)"
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "What is the correct way to write a JavaScript array?",
+    "options": [
+      "var colors = (1:'red', 2:'green')",
+      "var colors = ['red', 'green']",
+      "var colors = 'red', 'green'",
+      "var colors = { 'red', 'green' }"
+    ],
+    "answer": "var colors = ['red', 'green']"
+  },
+  {
+    "difficulty": "Beginner",
+    "question": "What is the result of `Boolean(0)`?",
+    "options": ["true", "false", "null", "undefined"],
+    "answer": "false"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "Which method is used to add a new element to the end of an array?",
+    "options": ["push()", "pop()", "shift()", "unshift()"],
+    "answer": "push()"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "Which method removes the last element from an array?",
+    "options": ["push()", "pop()", "shift()", "unshift()"],
+    "answer": "pop()"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What does `JSON.stringify()` do?",
+    "options": [
+      "Parses a JSON string",
+      "Converts a JavaScript object to a JSON string",
+      "Validates a JSON object",
+      "Fetches data from a JSON file"
+    ],
+    "answer": "Converts a JavaScript object to a JSON string"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What does `JSON.parse()` do?",
+    "options": [
+      "Parses a JSON string into a JavaScript object",
+      "Converts a JavaScript object to a JSON string",
+      "Stringifies a JSON object",
+      "Creates a new JSON object"
+    ],
+    "answer": "Parses a JSON string into a JavaScript object"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What is the purpose of the `this` keyword?",
+    "options": [
+      "Refers to the previous object",
+      "Refers to the current execution context's object",
+      "Refers to a global variable",
+      "Refers to the function itself"
+    ],
+    "answer": "Refers to the current execution context's object"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "Which method is used to combine two or more arrays?",
+    "options": ["merge()", "concat()", "append()", "join()"],
+    "answer": "concat()"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What is the output of `typeof NaN`?",
+    "options": ["'number'", "'nan'", "'object'", "'undefined'"],
+    "answer": "'number'"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "Which loop is guaranteed to execute at least once?",
+    "options": ["for", "while", "do...while", "for...in"],
+    "answer": "do...while"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "How do you select an HTML element by its id?",
+    "options": [
+      "document.querySelector('#id')",
+      "document.getElementByName('id')",
+      "document.selectById('id')",
+      "document.getElementsByClassName('id')"
+    ],
+    "answer": "document.querySelector('#id')"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What is an IIFE?",
+    "options": [
+      "Immediately Invoked Function Expression",
+      "Internal Function Framework",
+      "Instantly Indexed File Entry",
+      "Inherited Interface Function Example"
+    ],
+    "answer": "Immediately Invoked Function Expression"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "Which array method creates a new array with elements that pass a test?",
+    "options": ["map()", "forEach()", "filter()", "reduce()"],
+    "answer": "filter()"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What is event bubbling in the DOM?",
+    "options": [
+      "Event propagation from innermost to outermost element",
+      "Event propagation from outermost to innermost element",
+      "Stopping event propagation",
+      "Creating custom events"
+    ],
+    "answer": "Event propagation from innermost to outermost element"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What is the difference between `let` and `const`?",
+    "options": [
+      "`let` is block-scoped, `const` is function-scoped",
+      "`const` cannot be reassigned, `let` can",
+      "`const` is for numbers, `let` is for strings",
+      "There is no difference"
+    ],
+    "answer": "`const` cannot be reassigned, `let` can"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What does the `slice()` method do for arrays?",
+    "options": [
+      "Removes elements from an array",
+      "Adds elements to an array",
+      "Returns a shallow copy of a portion of an array",
+      "Sorts the array"
+    ],
+    "answer": "Returns a shallow copy of a portion of an array"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "How do you check if a variable `x` is an array?",
+    "options": [
+      "typeof x === 'array'",
+      "x instanceof Array",
+      "Array.isArray(x)",
+      "Both B and C"
+    ],
+    "answer": "Both B and C"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What is the purpose of the `bind()` method?",
+    "options": [
+      "To immediately call a function",
+      "To create a new function with a fixed `this` value",
+      "To merge two functions",
+      "To attach an event listener"
+    ],
+    "answer": "To create a new function with a fixed `this` value"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "Which method returns the first element in an array that satisfies a provided testing function?",
+    "options": ["find()", "filter()", "findIndex()", "search()"],
+    "answer": "find()"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What is the correct syntax for an arrow function?",
+    "options": [
+      "function => {}",
+      "() => {}",
+      "=> function() {}",
+      "arrow => {}"
+    ],
+    "answer": "() => {}"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "How can you prevent default behavior of an HTML event?",
+    "options": [
+      "event.stopPropagation()",
+      "event.stop()",
+      "event.preventDefault()",
+      "event.cancelBubble = true"
+    ],
+    "answer": "event.preventDefault()"
+  },
+  {
+    "difficulty": "Intermediate",
+    "question": "What is the spread operator (`...`) used for?",
+    "options": [
+      "Mathematical exponentiation",
+      "Declaring constants",
+      "Expanding iterables into individual elements",
+      "Defining private variables"
+    ],
+    "answer": "Expanding iterables into individual elements"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is a closure in JavaScript?",
+    "options": [
+      "A way to close browser windows",
+      "A function having access to its parent scope, even after the parent function has closed",
+      "A built-in JavaScript object",
+      "A syntax error"
+    ],
+    "answer": "A function having access to its parent scope, even after the parent function has closed"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What does the 'await' keyword do in JavaScript?",
+    "options": [
+      "Pauses execution until a Promise settles",
+      "Rejects the promise immediately",
+      "Resolves the value immediately",
+      "Loops through async operations"
+    ],
+    "answer": "Pauses execution until a Promise settles"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is prototypal inheritance?",
+    "options": [
+      "Inheritance based on classes",
+      "Inheritance where objects inherit directly from other objects",
+      "A way to copy objects",
+      "A specific type of loop"
+    ],
+    "answer": "Inheritance where objects inherit directly from other objects"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is the purpose of `use strict`?",
+    "options": [
+      "Enables strict mode, catching common coding errors and 'unsafe' actions",
+      "Makes JavaScript faster",
+      "Allows usage of newer ES6 features",
+      "Imports external libraries"
+    ],
+    "answer": "Enables strict mode, catching common coding errors and 'unsafe' actions"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is the difference between `==` and `===`?",
+    "options": [
+      "`==` checks only value, `===` checks value and type",
+      "`===` checks only value, `==` checks value and type",
+      "They are identical",
+      "`==` is assignment, `===` is comparison"
+    ],
+    "answer": "`==` checks only value, `===` checks value and type"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is hoisting in JavaScript?",
+    "options": [
+      "Lifting elements in the DOM",
+      "JavaScript's default behavior of moving declarations to the top",
+      "A specific CSS property",
+      "A method for optimizing code"
+    ],
+    "answer": "JavaScript's default behavior of moving declarations to the top"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is a Promise in JavaScript?",
+    "options": [
+      "A guarantee that a function will execute",
+      "An object representing the eventual completion or failure of an asynchronous operation",
+      "A callback function",
+      "A type of variable"
+    ],
+    "answer": "An object representing the eventual completion or failure of an asynchronous operation"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What does the `map()` array method do?",
+    "options": [
+      "Iterates over an array without returning value",
+      "Filters elements based on a condition",
+      "Creates a new array populated with the results of calling a provided function on every element",
+      "Reduces the array to a single value"
+    ],
+    "answer": "Creates a new array populated with the results of calling a provided function on every element"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is the Event Loop?",
+    "options": [
+      "A JavaScript engine component that handles execution of asynchronous code",
+      "A loop structure like `for` or `while`",
+      "A way to handle DOM events",
+      "A debugging tool"
+    ],
+    "answer": "A JavaScript engine component that handles execution of asynchronous code"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is memoization?",
+    "options": [
+      "A way to store data in memory",
+      "An optimization technique used to speed up function calls by caching results",
+      "A method for garbage collection",
+      "A security feature"
+    ],
+    "answer": "An optimization technique used to speed up function calls by caching results"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is the difference between `null` and `undefined`?",
+    "options": [
+      "They are identical",
+      "`null` is an assigned value representing 'no value', `undefined` means a variable has not been assigned",
+      "`undefined` is 0, `null` is empty",
+      "`null` is an object, `undefined` is a type"
+    ],
+    "answer": "`null` is an assigned value representing 'no value', `undefined` means a variable has not been assigned"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is 'callback hell'?",
+    "options": [
+      "An error thrown by callback functions",
+      "Nested callbacks making code hard to read and maintain",
+      "A specific JavaScript library",
+      "A security vulnerability"
+    ],
+    "answer": "Nested callbacks making code hard to read and maintain"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What does the `reduce()` method do?",
+    "options": [
+      "Executes a reducer function on each element, resulting in a single output value",
+      "Reduces the number of elements in an array",
+      "Filters out unwanted elements",
+      "Creates a new array based on the original"
+    ],
+    "answer": "Executes a reducer function on each element, resulting in a single output value"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is object destructuring?",
+    "options": [
+      "Deleting properties from an object",
+      "A syntax for unpacking properties from objects into distinct variables",
+      "Converting an object to an array",
+      "Comparing two objects"
+    ],
+    "answer": "A syntax for unpacking properties from objects into distinct variables"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is a Web Worker?",
+    "options": [
+      "A JavaScript script running in the background, independently of other scripts",
+      "A specific HTML element",
+      "A tool for debugging web pages",
+      "A CSS preprocessor"
+    ],
+    "answer": "A JavaScript script running in the background, independently of other scripts"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is the difference between `slice()` and `splice()` for arrays?",
+    "options": [
+      "`slice()` returns a copy, `splice()` modifies the original array",
+      "`splice()` returns a copy, `slice()` modifies the original array",
+      "They are identical",
+      "`slice()` adds elements, `splice()` removes them"
+    ],
+    "answer": "`slice()` returns a copy, `splice()` modifies the original array"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is CORS?",
+    "options": [
+      "A styling framework",
+      "Cross-Origin Resource Sharing, a security mechanism",
+      "A JavaScript runtime",
+      "A type of variable declaration"
+    ],
+    "answer": "Cross-Origin Resource Sharing, a security mechanism"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is the purpose of `Symbol` data type?",
+    "options": [
+      "To create unique identifiers for object properties",
+      "To represent graphical symbols",
+      "To store large numbers",
+      "To perform symbolic computation"
+    ],
+    "answer": "To create unique identifiers for object properties"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What are Generators in JavaScript?",
+    "options": [
+      "Functions that can be paused and resumed, generating a sequence of values",
+      "Functions that generate random numbers",
+      "Functions that create HTML elements",
+      "Built-in JavaScript objects for generation"
+    ],
+    "answer": "Functions that can be paused and resumed, generating a sequence of values"
+  },
+  {
+    "difficulty": "Advanced",
+    "question": "What is the `finally` block used for in Promises?",
+    "options": [
+      "To handle promise rejection",
+      "To handle promise resolution",
+      "To execute code regardless of the promise's outcome (fulfilled or rejected)",
+      "To finalize the promise chain"
+    ],
+    "answer": "To execute code regardless of the promise's outcome (fulfilled or rejected)"
+  }
+]

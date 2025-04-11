@@ -1,103 +1,117 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
+import { toast } from "sonner";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [name, setName] = useState("");
+  const [difficulty, setDifficulty] = useState("Beginner");
+  const [showForm, setShowForm] = useState(false);
+  const router = useRouter();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const startQuiz = () => {
+    if (!name.trim()) {
+      toast.warning("Please enter your name");
+      return;
+    }
+
+    sessionStorage.setItem("lastName", name);
+    router.push(
+      `/quiz?name=${encodeURIComponent(name)}&difficulty=${encodeURIComponent(
+        difficulty
+      )}`
+    );
+  };
+
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-between min-h-[calc(100vh-8rem)] px-6 py-10 max-w-7xl mx-auto gap-10 transition-all duration-700">
+      {/* Left Side: Image */}
+      <div className="md:w-1/2 flex justify-center items-center">
+        <Image
+          src="/test.svg"
+          alt="Choose your difficulty"
+          width={300}
+          height={300}
+          className="w-full max-w-sm md:max-w-md mx-auto"
+        />
+      </div>
+
+      {/* Right Side: Content OR Form */}
+      <div className="md:w-1/2 flex flex-col items-start text-left space-y-6 text-white transition-all duration-700 relative">
+        {/* Text Content Block */}
+        <div
+          className={`transition-all duration-700 ease-in-out space-y-4 ${
+            showForm
+              ? "opacity-0 -translate-y-4 h-0 overflow-hidden absolute"
+              : "opacity-100 translate-y-0"
+          }`}
+        >
+          <h1 className="text-3xl font-bold drop-shadow-lg">
+            Master JavaScript with{" "}
+            <span className="text-yellow-400">Quizord</span>
+          </h1>
+          <p className="text-white/80 text-lg">
+            Challenge your brain with fast-paced JS questions!
+          </p>
+          <ul className="list-disc pl-5 mt-2 text-white/70 text-sm space-y-1 list-none">
+            <li>⏱️ Beat the clock</li>
+            <li>🔥 Climb the leaderboard</li>
+            <li>🎯 Beginner to Advanced levels</li>
+          </ul>
+          <Button
+            onClick={() => setShowForm(true)}
+            className="mt-6 bg-yellow-400 text-black hover:bg-yellow-300 font-semibold text-base px-6 py-3 transition-transform hover:scale-105 cursor-pointer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Try Now
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+
+        {/* Form Block */}
+        <div
+          className={`w-full max-w-md space-y-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm shadow-md transition-all duration-700 ${
+            showForm
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-6 pointer-events-none absolute"
+          }`}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+          <h2 className="text-2xl font-semibold text-white">
+            JavaScript Quiz Challenge
+          </h2>
+          <Input
+            className="placeholder:text-white text-white placeholder:text-base text-base"
+            placeholder="Enter your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <Select value={difficulty} onValueChange={setDifficulty}>
+            <SelectTrigger className="w-full text-base text-white">
+              <SelectValue placeholder="Select difficulty" />
+            </SelectTrigger>
+            <SelectContent className="text-base bg-white text-black">
+              <SelectItem value="Beginner">Beginner</SelectItem>
+              <SelectItem value="Intermediate">Intermediate</SelectItem>
+              <SelectItem value="Advanced">Advanced</SelectItem>
+            </SelectContent>
+          </Select>
+          <Button
+            onClick={startQuiz}
+            className="w-full bg-yellow-400 text-black hover:bg-yellow-300 font-semibold transition-transform hover:scale-105"
+          >
+            Start Quiz
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }
